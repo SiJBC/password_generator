@@ -4,9 +4,10 @@
 
 Pseudo Code
 
-1. Prompt user on button click to select password length
+1. Prompt user on button type password length between 8-128
+
 2. Prompt user if entered length is not between 8-128 characters to do so
-3. Prompt user if 
+3. Confirm user if 
 
 			Special characters (see examples)
 
@@ -22,6 +23,7 @@ Pseudo Code
 
 
 4. Generate password based on user preferences
+4.1 conditions 4.2 etc
 
 5. Display password as alert
 
