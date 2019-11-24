@@ -3,6 +3,7 @@ var passwordEl = document.querySelector("#password");
 var passContainer = document.getElementById("#passContainer")
 
 
+
 passwordEl.addEventListener("click", function () {
 
     var passwordLength = prompt("Please select a number greater than 8 ?")
@@ -12,7 +13,7 @@ passwordEl.addEventListener("click", function () {
         // var numSymb = confirm("Would you like to have any numbers in your password ?");
         var specialSymb = confirm("Would you like a special symbol in your password");
         // var upperCase = confirm(" Would you like to have an upper case letter in your password ?");
-
+        var number = confirm("would you like to have a number in your password")
   
     }
     else {
@@ -26,15 +27,16 @@ passwordEl.addEventListener("click", function () {
     else {
         alert("please select to have a special symbol in the password")
     }
-
+    
+    if (numSymb) { }
+    else { alert("please select to have a number in your password") }
     // if (upperCase) { }
 
     // else {
     //     alert("please select to have an upper case letter")
     // }
 
-    // if (numSymb) { }
-    // else { alert("please select to have a number in your password") }
+
 
 
     
@@ -43,24 +45,19 @@ passwordEl.addEventListener("click", function () {
         var result = ''
         var characters = 'abcdefghijklmnopqesrtuvwxyz';
         var charactersLength = passwordLength;
-        // var numbers = '123456789';
+        var numbers = '123456789';
         var specialSymb = '!@#$%^&*()<>?:"{}|-,./;' 
-        // var shouldIncludeSpecialSymb = '';
-        
-        // if (shouldIncludeSpecialSymb === true) {
-        //     characters *= specialSymb
-        // }
+  
 
-        for (var i=0; i< passwordLength; i++){
-            result+= specialSymb.charAt(Math.floor(Math.random() * charactersLength)) + characters.charAt(Math.floor(Math.random() * charactersLength));
+        for (var i=0; i< passwordLength/3; i++){
+            result+= specialSymb.charAt(Math.floor(Math.random() * charactersLength)) + 
+            characters.charAt(Math.floor(Math.random() * charactersLength))
+            + numbers.charAt(Math.floor(Math.random() * charactersLength));
                         }
 
-        // for (var i = 0; i < passwordLength; i++) {
-        //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        // }
-        // if and else for odd use special symb for even special characters 
+     
 
-
+        var displayResult = result %2  
 
         alert("your password is " + result);
     
@@ -80,9 +77,8 @@ passwordEl.addEventListener("click", function () {
 
 
     }
-    // displayPassword()
 
-    // console.log(displayPassword)
+    
 });
 
 
