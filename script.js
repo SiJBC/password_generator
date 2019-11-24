@@ -51,14 +51,17 @@ passwordEl.addEventListener("click", function () {
         //     characters *= specialSymb
         // }
 
-        for(var i=0; i<passwordLength; i++){
-            result+= specialSymb.charAt(Math.floor(Math.random() * charactersLength));
+        for (var i=0; i< passwordLength; i++){
+            result+= specialSymb.charAt(Math.floor(Math.random() * charactersLength)) + characters.charAt(Math.floor(Math.random() * charactersLength));
                         }
 
-        for (var i = 0; i < passwordLength; i++) {
-            result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-        
+        // for (var i = 0; i < passwordLength; i++) {
+        //     result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        // }
+        // if and else for odd use special symb for even special characters 
+
+
+
         alert("your password is " + result);
     
         displayPassword(result)
