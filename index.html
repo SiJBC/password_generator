@@ -14,45 +14,74 @@
 <body background="./images/ripples.png">
 
   <div class="container">
-      <h1>Password Generator </h1>
-      <div class="container">
-  
-        <div class="container-fluid border border-secondary border-right-1000 mt-5 bg-light text-dark">
-  
-  
-          <div class="col-md-12">
-            <div class="page-header">
-              <h2>Generate a password</h2>
-              <hr>
-            </div>
-            <button id="password">Generate Password</button>
-            <button id="copy">Copy to clipboard</button>
-            <div>
-                <script src="./script.js"></script>
-                <div class="container-fluid">
-                  <div class = "text-area">
-                    <p id="passContainer" , text-align="centre", background-colour = "white ">
-                </div>
-                    
-                </div>
-                  
-              </p>
-             
-            </div>
+    <h1>Password Generator </h1>
+    <div class="container">
+
+      <div class="container-fluid border border-secondary border-right-1000 mt-5 bg-light text-dark">
+
+
+        <div class="col-md-12">
+          <div class="page-header">
+
+            <hr>
           </div>
+          <div class="text-area">
+            <p id="passContainer" , text-align="centre" , background-colour="white ">
+          </div>
+        
+            Password length:<span id="passLengthSlider"></span>
+            <p><input type="range" min="10" max="20" value="50" id="myRange">
+              </p>
+            <script>
+       
+              </script>
+
+            Special Symbol:
+            <p><input type="checkbox" id="specialSymb"></p>
+            Number:
+            <p><input type="checkbox" id="numSymb"></p>
+
+            Password Length more than 8 characters
+            <p><input type="checkbox" id="passwordLength"></p>
+           
+            <p><button id="password">Generate Password</button></p>
+            <p><button class="invalid" id="copy">Copy to clipboard</button>
+          
+            </p>
+          
         </div>
-  
-  
+
+
       </div>
-  </div>
+    </div>
+
+
+
+   
+            </head>
+            <body>
+            
+            <h3>Password Validation</h3>
+            <p>Password must have at least 8 characters contain 1 special character and 1 number</p>
+            
+            <div class="container">
+              <form>
+            
+                <label for="psw">Password</label>
+                <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                
+               
+              </form>
+            </div>
+            
+   
+                            
+           
 
 
 
 
-
-
-
- 
 </body>
+<script src="./script.js"></script>
 
 </html>
